@@ -20,6 +20,15 @@ function App() {
 
   const [feedbackList, setFeedbackList] = useState([]);
 
+  useEffect(fetchFeedback, []);
+
+ 
+
+
+  
+
+ 
+
   return (
     <div className='App'>
       <header className='App-header'>
