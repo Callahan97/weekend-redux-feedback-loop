@@ -9,12 +9,13 @@ const FeelingComp = () => {
 
     const handleNext = () => {
         dispatch({ type: 'SET_FEELING', payload: feeling });
-        navigate('/understanding');
+        navigate('../understanding');
     };
 
     return (
         <div>
             <h2>How are you feeling today?</h2>
+            <h3>1 - 5</h3>
             <input
                 type="number"
                 value={feeling}

@@ -18,6 +18,7 @@ const SupportComp = () => {
     return (
         <div>
             <h2>How well are you being supported?</h2>
+            <h3>1 - 5</h3>
             <input
                 type="number"
                 value={support}

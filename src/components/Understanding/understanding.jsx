@@ -18,7 +18,7 @@ const UnderstandingComp = () => {
     return (
         <div>
             <h2>How well are you understanding the content?</h2>
-
+            <h3>1 - 5</h3>
             <input type="number"
                 value={understanding}
                 onChange={(e) => setUnderstanding(e.target.value)}

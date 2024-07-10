@@ -40,9 +40,10 @@ function App() {
         <h4>Don't forget it!</h4>
       </header>
       <Routes>
-        <Route path="/" element={FeelingComp} />
-        <Route path="/understanding" element={UnderstandingComp} />
-        <Route path="/support" element={SupportComp} />
+        <Route path="/feeling" element={<FeelingComp/>} />
+        <Route path="/understanding" element={<UnderstandingComp/>} />
+        <Route path="/support" element={<SupportComp/>} />
+        <Route path="/" element={<FeelingComp />} />
       </Routes>
     </div>
     </Router>
