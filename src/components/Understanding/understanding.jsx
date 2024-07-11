@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 
 
 const UnderstandingComp = () => {
     const [understanding, setUnderstanding] = useState('');
     const dispatch = useDispatch();
-    const navigate = useNavigate();
+    const history = useHistory();
 
 
     const handleNext = () => {
         dispatch({ type: 'SET_UNDERSTANDING', payload: understanding });
-        navigate('/support');
+        history.push('/support');
     };
 
     return (

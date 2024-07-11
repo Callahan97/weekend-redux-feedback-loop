@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 
 const SupportComp = () => {
     const [support, setSupport] = useState('');
     const dispatch = useDispatch();
-    const navigate = useNavigate();
+    const history = useHistory();
 
 
     const handleNext = () => {
         dispatch({ type: 'SET_SUPPORT', payload: support });
-        navigate('/comments');
+        history.push('/comments');
     };
 
 

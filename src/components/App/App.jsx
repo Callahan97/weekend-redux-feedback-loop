@@ -1,7 +1,7 @@
 import {useEffect, useState} from 'react';
 import React from 'react';
 import axios from 'axios';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import store from '../../store';
 import './App.css';
 
@@ -13,7 +13,7 @@ import { Provider } from 'react-redux';
 
 function App() {
   const [feedbackList, setFeedbackList] = useState([]);
-  
+
 
   const fetchFeedback = () => {
     axios({
@@ -30,22 +30,26 @@ function App() {
 
   useEffect(fetchFeedback, []);
 
-  
+
   return (
     <Provider store={store}>
-    <Router>
-    <div className='App'>
-      <header className='App-header'>
-        <h1 className='App-title'>Feedback!</h1>
-        <h4>Don't forget it!</h4>
-      </header>
-      <Routes>
-        <Route path="/" element={FeelingComp} />
-        <Route path="/understanding" element={UnderstandingComp} />
-        <Route path="/support" element={SupportComp} />
-      </Routes>
-    </div>
-    </Router>
+      <Router>
+        <div className='App'>
+          <header className='App-header'>
+            <h1 className='App-title'>Feedback!</h1>
+            <h4>Don't forget it!</h4>
+          </header>
+            <Route path="/" exact>
+              <FeelingComp />
+            </Route>
+            <Route path="/understanding">
+              <UnderstandingComp />
+            </Route>
+            <Route path="/support">
+              <SupportComp />
+            </Route>
+        </div>
+      </Router>
     </Provider>
   );
 }
