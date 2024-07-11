@@ -8,6 +8,7 @@ import './App.css';
 import FeelingComp from '../Feeling/feeling';
 import UnderstandingComp from '../Understanding/understanding';
 import SupportComp from '../Supported/supported';
+import CommentsComp from '../Comments/comments';
 import { Provider } from 'react-redux';
 
 
@@ -40,10 +41,10 @@ function App() {
         <h4>Don't forget it!</h4>
       </header>
       <Routes>
-        <Route path="/feeling" element={<FeelingComp/>} />
+        <Route path="/" element={<FeelingComp/>} />
         <Route path="/understanding" element={<UnderstandingComp/>} />
         <Route path="/support" element={<SupportComp/>} />
-        <Route path="/" element={<FeelingComp />} />
+        <Route path="/comments" element={<CommentsComp/>} />
       </Routes>
     </div>
     </Router>
