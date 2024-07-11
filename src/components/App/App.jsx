@@ -9,6 +9,8 @@ import FeelingComp from '../Feeling/feeling';
 import UnderstandingComp from '../Understanding/understanding';
 import SupportComp from '../Supported/supported';
 import CommentsComp from '../Comments/comments';
+import ReviewComp from '../Review/review';
+import ThankYouComp from '../ThankYou/thankyou';
 import { Provider } from 'react-redux';
 
 
@@ -45,6 +47,9 @@ function App() {
         <Route path="/understanding" element={<UnderstandingComp/>} />
         <Route path="/support" element={<SupportComp/>} />
         <Route path="/comments" element={<CommentsComp/>} />
+        <Route path="/review" element={<ReviewComp />} />
+        <Route path="/thank-you" element={<ThankYouComp />} />
+        <Route path="/feeling" element={<FeelingComp/>} />
       </Routes>
     </div>
     </Router>
